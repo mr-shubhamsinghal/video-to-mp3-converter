@@ -25,9 +25,11 @@ def login():
 @server.route("/upload", methods=["POST"])
 def upload():
     access, err = validate.token(request)
+    print("helo from upload")
     if err:
         return err
     access = json.loads(access)
+    print("helo server.py line 32")
     if access["admin"]:
         if len(request.files) > 1 or len(request.files) < 1:
             return "exactly 1 file required", 400

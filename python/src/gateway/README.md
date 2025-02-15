@@ -15,3 +15,5 @@
 - minikube addons enable ingress
 - kubectl scale deployment --replicas=0 gateway
 - kubectl scale deployment --replicas=1 auth converter gateway -> for multiple services
+
+- kubectl exec -it gateway-7566868bb6-whpkj -- /bin/sh
